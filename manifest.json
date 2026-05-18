@@ -1,0 +1,48 @@
+{
+  "name": "ESP32 Webserver",
+  "version": "1.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "./classic_build/bootloader.bin",
+          "offset": 4096
+        },
+        {
+          "path": "./classic_build/partitions.bin",
+          "offset": 32768
+        },
+        {
+          "path": "./classic_build/firmware.bin",
+          "offset": 65536
+        },
+        {
+          "path": "./classic_build/spiffs.bin",
+          "offset": 2686976
+        }
+      ]
+    },
+    {
+      "chipFamily": "ESP32-C6",
+      "parts": [
+        {
+          "path": "./c6_build/bootloader.bin",
+          "offset": 0
+        },
+        {
+          "path": "./c6_build/partitions.bin",
+          "offset": 32768
+        },
+        {
+          "path": "./c6_build/firmware.bin",
+          "offset": 65536
+        },
+        {
+          "path": "./c6_build/spiffs.bin",
+          "offset": 2686976
+        }
+      ]
+    }
+  ]
+}
